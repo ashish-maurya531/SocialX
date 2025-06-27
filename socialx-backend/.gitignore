@@ -1,0 +1,29 @@
+# Node
+node_modules/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+*.log
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Build
+/dist/
+/build/
+
+# Others
+*.local
+*.sublime-workspace
+*.sublime-project
+
+# Ignore uploads (but keep the folder)
+services/post-service/uploads/*
+!services/post-service/uploads/.gitkeep

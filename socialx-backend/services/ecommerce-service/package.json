@@ -1,0 +1,1 @@
+{"name":"ecommerce-service","main":"src/server.js","dependencies":{"dotenv":"^16.5.0","express":"^5.1.0","pg":"^8.16.0"}}

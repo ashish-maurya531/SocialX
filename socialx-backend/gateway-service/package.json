@@ -1,0 +1,18 @@
+{
+    "name": "gateway-service",
+    "main": "src/server.js",
+    "dependencies": {
+        "dotenv": "^16.5.0",
+        "express": "^5.1.0",
+        "http-proxy-middleware": "^3.0.5",
+        "jsonwebtoken": "^9.0.2"
+    },
+    "scripts": {
+
+        "user": "node ../services/user-service/src/server.js",
+        "post": "node ../services/post-service/src/server.js",
+        "chat": "node ../services/chat-service/src/server.js",
+        "ecommerce": "node ../services/ecommerce-service/src/server.js",
+        "dev": "npm-run-all --parallel user post ecommerce"
+    }
+}
