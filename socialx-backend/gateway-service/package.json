@@ -2,13 +2,16 @@
     "name": "gateway-service",
     "main": "src/server.js",
     "dependencies": {
-        "dotenv": "^16.5.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.6.0",
         "express": "^5.1.0",
+        "helmet": "^8.1.0",
         "http-proxy-middleware": "^3.0.5",
-        "jsonwebtoken": "^9.0.2"
+        "jsonwebtoken": "^9.0.2",
+        "moment-timezone": "^0.6.0",
+        "morgan": "^1.10.0"
     },
     "scripts": {
-
         "user": "node ../services/user-service/src/server.js",
         "post": "node ../services/post-service/src/server.js",
         "chat": "node ../services/chat-service/src/server.js",

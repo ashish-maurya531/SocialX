@@ -1,1 +1,1 @@
-{"name":"post-service","main":"src/server.js","dependencies":{"dotenv":"^16.5.0","express":"^5.1.0","pg":"^8.16.0"}}
+{"name":"post-service","main":"src/server.js","dependencies":{"cors":"^2.8.5","dotenv":"^16.6.0","express":"^5.1.0","helmet":"^8.1.0","http-proxy-middleware":"^3.0.5","jsonwebtoken":"^9.0.2","moment-timezone":"^0.6.0","morgan":"^1.10.0","pg":"^8.16.0","xss-clean":"^0.1.4"}}
