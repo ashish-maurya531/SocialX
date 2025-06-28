@@ -7,8 +7,8 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const auth = require('./middlewares/auth');
 const userProxy = require('./routes/userProxy');
 const postProxy = require('./routes/postProxy');
-// const chatProxy = require('./routes/chatProxy');
-// const ecommerceProxy = require('./routes/ecommerceProxy');
+const chatProxy = require('./routes/chatProxy');
+const ecommerceProxy = require('./routes/ecommerceProxy.js');
 const moment = require('moment-timezone');
 
 const app = express();
@@ -33,12 +33,20 @@ app.use('/api/posts', (req, res, next) => {
   console.log(`[Gateway] Proxying to Post Service: ${req.method} ${req.originalUrl}`);
   next();
 });
+app.use('/api/chats', (req, res, next) => {
+  console.log(`[Gateway] Proxying to Chat Service: ${req.method} ${req.originalUrl}`);
+  next();
+});
+app.use('/api/ecommerce', (req, res, next) => {
+  console.log(`[Gateway] Proxying to Ecommerce Service: ${req.method} ${req.originalUrl}`);
+  next();
+})
 
 // Proxy to user and post services
 app.use('/api', userProxy);
 app.use('/api', postProxy);
-// app.use('/api', chatProxy);
-// app.use('/api', ecommerceProxy);
+app.use('/api', chatProxy);
+app.use('/api', ecommerceProxy);
 
 app.get('/', (req, res) => res.send('Gateway Service Running'));
 
